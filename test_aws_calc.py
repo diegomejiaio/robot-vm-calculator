@@ -60,6 +60,11 @@ async def main():
                         ## await page.get_by_title("Windows Server", exact=True).locator("span").nth(1).click()
                         await page.get_by_role("option", name="Windows Server", exact=True).click()
                         await page.get_by_label("Operating system").press("Escape")
+                    case "Red Hat Enterprise Linux":
+                        await page.get_by_label("Operating system").click()
+                        ## await page.get_by_title("Windows Server", exact=True).locator("span").nth(1).click()
+                        await page.get_by_role("option", name="Red Hat Enterprise Linux", exact=True).click()
+                        await page.get_by_label("Operating system").press("Escape")
                 ## await page.pause()
                 # select instance type
                 await page.get_by_placeholder("Search by instance name or filter by keyword").click()
